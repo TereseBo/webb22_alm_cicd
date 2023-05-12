@@ -3,7 +3,10 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+ // const members=JSON.stringify({initials:["TB", "HA", "MA", "RF"]})
+  const members={initials:["TB", "HA", "MA", "RF"]}
+
+  res.json(members);
 });
 
 module.exports = router;

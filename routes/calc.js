@@ -1,8 +1,9 @@
 const express = require('express');
 const { validateParams } = require('../utils/midddlewares/extractParams');
-
+const {Calculator}= require('../utils/calculator')
 const router = express.Router();
 
+const {addreq}= require('../utils/controllers/addreq')
 /* GET home page. */
 router.get('/', (req, res, next) => {
   res.render('index', { title: 'Calc', text: '' });
@@ -10,9 +11,7 @@ router.get('/', (req, res, next) => {
 
 router.use(validateParams);
 
-router.get('/add', (req, res, next) => {
-  res.render('calc', { title: 'Add', text: '' });
-});
+router.get('/add', addreq);
 router.get('/subtract', (req, res, next) => {
   res.render('calc', { title: 'Sub', text: '' });
 });

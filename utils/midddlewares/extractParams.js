@@ -12,7 +12,7 @@ function validateParams(req, res, next) {
     return;
   }
   const values = validated.value.val;
-  req.values=values
+  req.values = values;
   next();
 }
 

@@ -8,7 +8,7 @@ router.get('/', (req, res, next) => {
   res.render('index', { title: 'Calc', text: '' });
 });
 
-router.use(validateParams)
+router.use(validateParams);
 
 router.get('/add', (req, res, next) => {
   res.render('calc', { title: 'Add', text: '' });

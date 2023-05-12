@@ -1,4 +1,5 @@
 const express = require('express');
+const { validateParams } = require('../utils/midddlewares/extractParams');
 
 const router = express.Router();
 
@@ -6,6 +7,8 @@ const router = express.Router();
 router.get('/', (req, res, next) => {
   res.render('index', { title: 'Calc', text: '' });
 });
+
+router.use(validateParams)
 
 router.get('/add', (req, res, next) => {
   res.render('calc', { title: 'Add', text: '' });

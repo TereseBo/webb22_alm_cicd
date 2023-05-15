@@ -1,7 +1,7 @@
 const Joi = require('joi');
 
 const valueSchema = Joi.object({
-  val: Joi.array().items(Joi.number()),
+  val: Joi.array().items(Joi.number().required()).min(2).required(),
 });
 
 function validateParams(req, res, next) {

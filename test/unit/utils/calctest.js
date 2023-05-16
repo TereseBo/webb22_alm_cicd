@@ -1,5 +1,5 @@
 const assert = require('assert');
-const { Calculator } = require('../utils/calculator');
+const { Calculator } = require('../../../utils/calculator');
 
 describe('Calculator ', function () {
   let calc;
@@ -21,7 +21,7 @@ describe('Calculator ', function () {
       assert.equal(calc.getResult(), 0);
     });
 
-    it('should return 0 when the calculator is cleared after add<89 and multiply()', function () {
+    it('should return 0 when the calculator is cleared after add and multiply()', function () {
       calc.add(5);
       calc.multiply(5);
       assert.equal(calc.getResult(), 25);

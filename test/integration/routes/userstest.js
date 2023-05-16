@@ -1,7 +1,7 @@
 const assert = require('assert');
 const request = require('supertest');
-const { members } = require('../utils/members');
-const app = require('../app');
+const { members } = require('../../../utils/members');
+const app = require('../../../app');
 
 describe('users route', function () {
   describe('GET /users', function () {

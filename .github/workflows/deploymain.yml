@@ -1,0 +1,12 @@
+name: deploy
+
+on:
+    push:
+      branches: 
+        - main
+jobs:
+    deploy_main:
+        runs-on: ubuntu-latest
+        steps:
+        - run: "echo now deploying to production"
+

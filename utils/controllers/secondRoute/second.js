@@ -1,6 +1,8 @@
+const { reverse } = require('../../functions/reversestring');
+
 function second(req, res, next) {
   const { input } = req.params;
-  const output = `${input.split('').reverse().join('')}!`;
+  const output = reverse(input);
   res.render('second', { title: 'Response', input, output });
 }
 

@@ -3,10 +3,10 @@ const { validateParams } = require('../utils/midddlewares/extractParams');
 
 const router = express.Router();
 
-const { addreq } = require('../utils/controllers/addreq');
-const { multiplyreq } = require('../utils/controllers/multiplyreq');
-const { subtractreq } = require('../utils/controllers/subtractreq');
-const { dividereq } = require('../utils/controllers/dividereq');
+const { addreq } = require('../utils/controllers/calcRoute/addreq');
+const { multiplyreq } = require('../utils/controllers/calcRoute/multiplyreq');
+const { subtractreq } = require('../utils/controllers/calcRoute/subtractreq');
+const { dividereq } = require('../utils/controllers/calcRoute/dividereq');
 /* GET home page. */
 router.get('/', (req, res, next) => {
   res.render('index', { title: 'Calc', text: 'Welcome to the calculator, it \'s not very good. Choose your method and add the numbers to use and add them to the url in the format:.../method?val=1&val=1... ' });

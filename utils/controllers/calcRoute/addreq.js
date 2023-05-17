@@ -1,4 +1,4 @@
-const { Calculator } = require('../calculator');
+const { Calculator } = require('../../calculator');
 
 function addreq(req, res) {
   const calc = new Calculator();

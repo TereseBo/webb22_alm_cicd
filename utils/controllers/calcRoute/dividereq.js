@@ -1,4 +1,4 @@
-const { Calculator } = require('../calculator');
+const { Calculator } = require('../../calculator');
 
 function dividereq(req, res) {
   const calc = new Calculator();

@@ -26,7 +26,7 @@ jobs:
       - run: npm install
       - run: npm run test:integration
       - run: "echo nyc_check_coverage ${NYC_CHECK_COVERAGE}"
-      - run: npm run coverage ${NYC_CHECK_COVERAGE}
+      - run: npm run coverage 
   linting:
         runs-on: ubuntu-latest
         steps:

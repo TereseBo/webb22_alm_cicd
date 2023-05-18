@@ -6,7 +6,7 @@ on:
       - main
 env:
   NYC_CHECK_COVERAGE: 50
-  
+
 jobs:
   unit_test:
     runs-on: ubuntu-latest
@@ -25,7 +25,7 @@ jobs:
           node-version: "18.x"
       - run: npm install
       - run: npm run test:integration
-      - run: nyc check-coverage --lines ${NYC_CHECK_COVERAGE}
+      - run: npm run coverage ${NYC_CHECK_COVERAGE}
   linting:
         runs-on: ubuntu-latest
         steps:

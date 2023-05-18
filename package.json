@@ -10,7 +10,8 @@
     "prepare": "husky install",
     "test:unit": "nyc mocha test/unit --recursive",
     "test:integration": "nyc mocha test/integration --recursive",
-    "test:all": "nyc mocha test --recursive"
+    "test:all": "nyc mocha test --recursive",
+    "coverage": "nyc check-coverage --line"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",

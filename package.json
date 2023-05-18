@@ -8,9 +8,9 @@
     "lint": "eslint .",
     "lint-fix": "eslint --fix .",
     "prepare": "husky install",
-    "test:unit": "mocha test/unit --recursive",
-    "test:integration": "mocha test/integration --recursive",
-    "test:all": "mocha test --recursive"
+    "test:unit": "nyc mocha test/unit --recursive",
+    "test:integration": "nyc mocha test/integration --recursive",
+    "test:all": "nyc mocha test --recursive"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -28,6 +28,7 @@
     "eslint-plugin-node": "^11.1.0",
     "husky": "^8.0.0",
     "mocha": "^10.2.0",
+    "nyc": "^15.1.0",
     "supertest": "^6.3.3"
   }
 }

@@ -1,0 +1,26 @@
+
+name: 'test_report'
+on:
+  workflow_run:
+    workflows: ['testing']                     # runs after testing workflow
+    types:
+      - completed
+jobs:
+  unit_report:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: dorny/test-reporter@v1
+      with:
+        artifact: unit-test-results            # artifact name
+        name: Unit Tests                  # Name of the check run which will be created
+        path: '*.json'                     # Path to test results (inside artifact .zip)
+        reporter: mocha-json              # Format of test results
+  integration_report:
+        runs-on: ubuntu-latest
+        steps:
+        - uses: dorny/test-reporter@v1
+          with:
+           artifact: integ-test-results            # artifact name
+           name: Integ Tests                  # Name of the check run which will be created
+           path: '*.json'                     # Path to test results (inside artifact .zip)
+           reporter: mocha-json              # Format of test results

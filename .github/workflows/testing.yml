@@ -1,7 +1,6 @@
 name: testing
 
 on:
-  push:
   pull_request:
     branches:
       - main
@@ -15,6 +14,18 @@ jobs:
           node-version: "18.x"
       - run: npm install
       - run: npm run test:unit
+      - uses: actions/upload-artifact@v2  # upload test results
+        if: success() || failure()        
+        with:
+          name: unit-test-results
+          path: unit-test-results.json
+      #- name: Unit test Report
+      #  uses: dorny/test-reporter@v1
+      #   
+      #  with:
+      #    name: Unit Tests            # Name of the check run which will be created
+      #    path: reports/unit-test-results.json    # Path to test results
+      #    reporter: mocha-json        # Format of test results
   
   integration_test:
     runs-on: ubuntu-latest
@@ -25,6 +36,18 @@ jobs:
           node-version: "18.x"
       - run: npm install
       - run: npm run test:integration
+      - uses: actions/upload-artifact@v2  # upload test results
+        if: success() || failure()        
+        with:
+          name: integ-test-results
+          path: integ-test-results.json
+      #- name: Integration test Report
+      #  uses: dorny/test-reporter@v1
+      #    
+      #  with:
+      #    name: Unit Tests            # Name of the check run which will be created
+      #    path: reports/integ-test-results.json    # Path to test results
+      #    reporter: mocha-json        # Format of test results
       
   linting:
     runs-on: ubuntu-latest

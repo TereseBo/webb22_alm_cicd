@@ -1,0 +1,144 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-05-18T07:53:35.150Z",
+    "end": "2023-05-18T07:53:35.156Z",
+    "duration": 6
+  },
+  "tests": [
+    {
+      "title": "should return 0 when the calculator is created",
+      "fullTitle": "Calculator  getResult() should return 0 when the calculator is created",
+      "file": "C:\\Users\\adam_\\OneDrive\\Skrivbord\\Skola\\ALCM\\webb22_alm_cicd\\test\\unit\\utils\\calctest.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return 0 when the calculator is cleared after add()",
+      "fullTitle": "Calculator  clearAll() should return 0 when the calculator is cleared after add()",
+      "file": "C:\\Users\\adam_\\OneDrive\\Skrivbord\\Skola\\ALCM\\webb22_alm_cicd\\test\\unit\\utils\\calctest.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return 0 when the calculator is cleared after add and multiply()",
+      "fullTitle": "Calculator  clearAll() should return 0 when the calculator is cleared after add and multiply()",
+      "file": "C:\\Users\\adam_\\OneDrive\\Skrivbord\\Skola\\ALCM\\webb22_alm_cicd\\test\\unit\\utils\\calctest.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return previous value of result",
+      "fullTitle": "Calculator  clear should return previous value of result",
+      "file": "C:\\Users\\adam_\\OneDrive\\Skrivbord\\Skola\\ALCM\\webb22_alm_cicd\\test\\unit\\utils\\calctest.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return previous value of result after add and multiply",
+      "fullTitle": "Calculator  clear should return previous value of result after add and multiply",
+      "file": "C:\\Users\\adam_\\OneDrive\\Skrivbord\\Skola\\ALCM\\webb22_alm_cicd\\test\\unit\\utils\\calctest.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return previous value of result after multiple add and multiply",
+      "fullTitle": "Calculator  clear should return previous value of result after multiple add and multiply",
+      "file": "C:\\Users\\adam_\\OneDrive\\Skrivbord\\Skola\\ALCM\\webb22_alm_cicd\\test\\unit\\utils\\calctest.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return previous value after cleareAll()",
+      "fullTitle": "Calculator  clear should return previous value after cleareAll()",
+      "file": "C:\\Users\\adam_\\OneDrive\\Skrivbord\\Skola\\ALCM\\webb22_alm_cicd\\test\\unit\\utils\\calctest.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [],
+  "passes": [
+    {
+      "title": "should return 0 when the calculator is created",
+      "fullTitle": "Calculator  getResult() should return 0 when the calculator is created",
+      "file": "C:\\Users\\adam_\\OneDrive\\Skrivbord\\Skola\\ALCM\\webb22_alm_cicd\\test\\unit\\utils\\calctest.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return 0 when the calculator is cleared after add()",
+      "fullTitle": "Calculator  clearAll() should return 0 when the calculator is cleared after add()",
+      "file": "C:\\Users\\adam_\\OneDrive\\Skrivbord\\Skola\\ALCM\\webb22_alm_cicd\\test\\unit\\utils\\calctest.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return 0 when the calculator is cleared after add and multiply()",
+      "fullTitle": "Calculator  clearAll() should return 0 when the calculator is cleared after add and multiply()",
+      "file": "C:\\Users\\adam_\\OneDrive\\Skrivbord\\Skola\\ALCM\\webb22_alm_cicd\\test\\unit\\utils\\calctest.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return previous value of result",
+      "fullTitle": "Calculator  clear should return previous value of result",
+      "file": "C:\\Users\\adam_\\OneDrive\\Skrivbord\\Skola\\ALCM\\webb22_alm_cicd\\test\\unit\\utils\\calctest.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return previous value of result after add and multiply",
+      "fullTitle": "Calculator  clear should return previous value of result after add and multiply",
+      "file": "C:\\Users\\adam_\\OneDrive\\Skrivbord\\Skola\\ALCM\\webb22_alm_cicd\\test\\unit\\utils\\calctest.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return previous value of result after multiple add and multiply",
+      "fullTitle": "Calculator  clear should return previous value of result after multiple add and multiply",
+      "file": "C:\\Users\\adam_\\OneDrive\\Skrivbord\\Skola\\ALCM\\webb22_alm_cicd\\test\\unit\\utils\\calctest.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return previous value after cleareAll()",
+      "fullTitle": "Calculator  clear should return previous value after cleareAll()",
+      "file": "C:\\Users\\adam_\\OneDrive\\Skrivbord\\Skola\\ALCM\\webb22_alm_cicd\\test\\unit\\utils\\calctest.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    }
+  ]
+}

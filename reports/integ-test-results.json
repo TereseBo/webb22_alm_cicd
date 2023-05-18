@@ -1,0 +1,208 @@
+[0mGET /calc/add/?val=1&val=2 [32m200 [0m13.915 ms - 270[0m
+[0mGET /calc/add/?val=1&val=1&val=1&val=1&val=1 [32m200 [0m2.382 ms - 276[0m
+[0mGET /calc/add/?val=1 [33m400 [0m2.369 ms - 253[0m
+[0mGET /calc/add/? [33m400 [0m1.375 ms - 248[0m
+[0mGET /calc/multiply/?val=1&val=2 [32m200 [0m1.501 ms - 275[0m
+[0mGET /calc/multiply/?val=1&val=1&val=1&val=1&val=1 [32m200 [0m1.446 ms - 281[0m
+[0mGET /calc/multiply/?val=1 [33m400 [0m1.158 ms - 253[0m
+[0mGET /calc/multiply/? [33m400 [0m1.028 ms - 248[0m
+[0mGET /users [32m200 [0m1.047 ms - 34[0m
+[0mGET /users [32m200 [0m0.722 ms - 34[0m
+{
+  "stats": {
+    "suites": 8,
+    "tests": 10,
+    "passes": 10,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-05-18T07:53:37.429Z",
+    "end": "2023-05-18T07:53:37.522Z",
+    "duration": 93
+  },
+  "tests": [
+    {
+      "title": "responds with \"Result: 3 for 1 and 2",
+      "fullTitle": "calc/add GET /add calculations responds with \"Result: 3 for 1 and 2",
+      "file": "C:\\Users\\adam_\\OneDrive\\Skrivbord\\Skola\\ALCM\\webb22_alm_cicd\\test\\integration\\routes\\calcroute\\addtest.js",
+      "duration": 40,
+      "currentRetry": 0,
+      "speed": "medium",
+      "err": {}
+    },
+    {
+      "title": "responds with \"Result: 5 for 1, 1, 1, 1 and 1",
+      "fullTitle": "calc/add GET /add calculations responds with \"Result: 5 for 1, 1, 1, 1 and 1",
+      "file": "C:\\Users\\adam_\\OneDrive\\Skrivbord\\Skola\\ALCM\\webb22_alm_cicd\\test\\integration\\routes\\calcroute\\addtest.js",
+      "duration": 7,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "responds with Error page for missing param",
+      "fullTitle": "calc/add GET /add errormessages responds with Error page for missing param",
+      "file": "C:\\Users\\adam_\\OneDrive\\Skrivbord\\Skola\\ALCM\\webb22_alm_cicd\\test\\integration\\routes\\calcroute\\addtest.js",
+      "duration": 6,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "responds with Error page for missing params",
+      "fullTitle": "calc/add GET /add errormessages responds with Error page for missing params",
+      "file": "C:\\Users\\adam_\\OneDrive\\Skrivbord\\Skola\\ALCM\\webb22_alm_cicd\\test\\integration\\routes\\calcroute\\addtest.js",
+      "duration": 5,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "responds with \"Result: 2 for 1 and 2",
+      "fullTitle": "calc/multiply GET /multiply calculations responds with \"Result: 2 for 1 and 2",
+      "file": "C:\\Users\\adam_\\OneDrive\\Skrivbord\\Skola\\ALCM\\webb22_alm_cicd\\test\\integration\\routes\\calcroute\\multiplytest.js",
+      "duration": 5,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "responds with \"Result: 1 for 1, 1, 1, 1 and 1",
+      "fullTitle": "calc/multiply GET /multiply calculations responds with \"Result: 1 for 1, 1, 1, 1 and 1",
+      "file": "C:\\Users\\adam_\\OneDrive\\Skrivbord\\Skola\\ALCM\\webb22_alm_cicd\\test\\integration\\routes\\calcroute\\multiplytest.js",
+      "duration": 4,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "responds with Error page for missing param",
+      "fullTitle": "calc/multiply GET /multiply errormessages responds with Error page for missing param",
+      "file": "C:\\Users\\adam_\\OneDrive\\Skrivbord\\Skola\\ALCM\\webb22_alm_cicd\\test\\integration\\routes\\calcroute\\multiplytest.js",
+      "duration": 5,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "responds with Error page for missing params",
+      "fullTitle": "calc/multiply GET /multiply errormessages responds with Error page for missing params",
+      "file": "C:\\Users\\adam_\\OneDrive\\Skrivbord\\Skola\\ALCM\\webb22_alm_cicd\\test\\integration\\routes\\calcroute\\multiplytest.js",
+      "duration": 4,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "responds with json",
+      "fullTitle": "users route GET /users responds with json",
+      "file": "C:\\Users\\adam_\\OneDrive\\Skrivbord\\Skola\\ALCM\\webb22_alm_cicd\\test\\integration\\routes\\userstest.js",
+      "duration": 6,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "responds with members",
+      "fullTitle": "users route GET /users responds with members",
+      "file": "C:\\Users\\adam_\\OneDrive\\Skrivbord\\Skola\\ALCM\\webb22_alm_cicd\\test\\integration\\routes\\userstest.js",
+      "duration": 5,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [],
+  "passes": [
+    {
+      "title": "responds with \"Result: 3 for 1 and 2",
+      "fullTitle": "calc/add GET /add calculations responds with \"Result: 3 for 1 and 2",
+      "file": "C:\\Users\\adam_\\OneDrive\\Skrivbord\\Skola\\ALCM\\webb22_alm_cicd\\test\\integration\\routes\\calcroute\\addtest.js",
+      "duration": 40,
+      "currentRetry": 0,
+      "speed": "medium",
+      "err": {}
+    },
+    {
+      "title": "responds with \"Result: 5 for 1, 1, 1, 1 and 1",
+      "fullTitle": "calc/add GET /add calculations responds with \"Result: 5 for 1, 1, 1, 1 and 1",
+      "file": "C:\\Users\\adam_\\OneDrive\\Skrivbord\\Skola\\ALCM\\webb22_alm_cicd\\test\\integration\\routes\\calcroute\\addtest.js",
+      "duration": 7,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "responds with Error page for missing param",
+      "fullTitle": "calc/add GET /add errormessages responds with Error page for missing param",
+      "file": "C:\\Users\\adam_\\OneDrive\\Skrivbord\\Skola\\ALCM\\webb22_alm_cicd\\test\\integration\\routes\\calcroute\\addtest.js",
+      "duration": 6,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "responds with Error page for missing params",
+      "fullTitle": "calc/add GET /add errormessages responds with Error page for missing params",
+      "file": "C:\\Users\\adam_\\OneDrive\\Skrivbord\\Skola\\ALCM\\webb22_alm_cicd\\test\\integration\\routes\\calcroute\\addtest.js",
+      "duration": 5,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "responds with \"Result: 2 for 1 and 2",
+      "fullTitle": "calc/multiply GET /multiply calculations responds with \"Result: 2 for 1 and 2",
+      "file": "C:\\Users\\adam_\\OneDrive\\Skrivbord\\Skola\\ALCM\\webb22_alm_cicd\\test\\integration\\routes\\calcroute\\multiplytest.js",
+      "duration": 5,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "responds with \"Result: 1 for 1, 1, 1, 1 and 1",
+      "fullTitle": "calc/multiply GET /multiply calculations responds with \"Result: 1 for 1, 1, 1, 1 and 1",
+      "file": "C:\\Users\\adam_\\OneDrive\\Skrivbord\\Skola\\ALCM\\webb22_alm_cicd\\test\\integration\\routes\\calcroute\\multiplytest.js",
+      "duration": 4,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "responds with Error page for missing param",
+      "fullTitle": "calc/multiply GET /multiply errormessages responds with Error page for missing param",
+      "file": "C:\\Users\\adam_\\OneDrive\\Skrivbord\\Skola\\ALCM\\webb22_alm_cicd\\test\\integration\\routes\\calcroute\\multiplytest.js",
+      "duration": 5,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "responds with Error page for missing params",
+      "fullTitle": "calc/multiply GET /multiply errormessages responds with Error page for missing params",
+      "file": "C:\\Users\\adam_\\OneDrive\\Skrivbord\\Skola\\ALCM\\webb22_alm_cicd\\test\\integration\\routes\\calcroute\\multiplytest.js",
+      "duration": 4,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "responds with json",
+      "fullTitle": "users route GET /users responds with json",
+      "file": "C:\\Users\\adam_\\OneDrive\\Skrivbord\\Skola\\ALCM\\webb22_alm_cicd\\test\\integration\\routes\\userstest.js",
+      "duration": 6,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "responds with members",
+      "fullTitle": "users route GET /users responds with members",
+      "file": "C:\\Users\\adam_\\OneDrive\\Skrivbord\\Skola\\ALCM\\webb22_alm_cicd\\test\\integration\\routes\\userstest.js",
+      "duration": 5,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    }
+  ]
+}

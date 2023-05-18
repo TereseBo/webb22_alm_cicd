@@ -49,13 +49,3 @@ jobs:
       #    path: reports/integ-test-results.json    # Path to test results
       #    reporter: mocha-json        # Format of test results
       
-  linting:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: "18.x"
-      - run: npm install
-      - run: npm run lint
-

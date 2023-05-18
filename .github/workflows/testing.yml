@@ -14,6 +14,13 @@ jobs:
           node-version: "18.x"
       - run: npm install
       - run: npm run test:unit
+      - name: Unit test Report
+        uses: dorny/test-reporter@v1
+        if: success() || failure()   
+        with:
+          name: Unit Tests            # Name of the check run which will be created
+          path: reports/unit-test-results.json    # Path to test results
+          reporter: mocha-json        # Format of test results
   
   integration_test:
     runs-on: ubuntu-latest
@@ -24,6 +31,13 @@ jobs:
           node-version: "18.x"
       - run: npm install
       - run: npm run test:integration
+      - name: Integration test Report
+        uses: dorny/test-reporter@v1
+        if: success() || failure()   
+        with:
+          name: Unit Tests            # Name of the check run which will be created
+          path: reports/integ-test-results.json    # Path to test results
+          reporter: mocha-json        # Format of test results
       
   linting:
     runs-on: ubuntu-latest

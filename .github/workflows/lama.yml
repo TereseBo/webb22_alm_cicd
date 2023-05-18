@@ -1,0 +1,23 @@
+name: testing
+
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  
+  integration_test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm install
+      - run: npm run test:integration
+
+      - name: Integration test Report
+        uses: dorny/test-reporter@v1
+          
+        with:
+          name: Integ Tests            # Name of the check run which will be created
+          path: integ-test-results.json    # Path to test results
+          reporter: mocha-json        # Format of test results
+      

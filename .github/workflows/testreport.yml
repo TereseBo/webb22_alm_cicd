@@ -2,7 +2,7 @@
 name: 'test_report'
 on:
   workflow_run:
-    workflows: ['testing']                     # runs after testing workflow
+    workflows: [testing]                     # runs after testing workflow
     types:
       - completed
 jobs:

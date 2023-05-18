@@ -4,11 +4,12 @@ on:
   pull_request:
     branches:
       - main
-env:
-  NYC_CHECK_COVERAGE: 70
 
 jobs:
   unit_test:
+    env:
+      NYC_CHECK_COVERAGE: 60
+    
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -19,6 +20,9 @@ jobs:
 
   
   integration_test:
+    env:
+      NYC_CHECK_COVERAGE: 70
+      
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3

@@ -8,8 +8,8 @@
     "lint": "eslint .",
     "lint-fix": "eslint --fix .",
     "prepare": "husky install",
-    "test:unit": "mocha test/unit --recursive --reporter json > reports/unit-test-results.json",
-    "test:integration": "mocha test/integration --recursive --reporter json > reports/integ-test-results.json",
+    "test:unit": "mocha test/unit --recursive --reporter json > unit-test-results.json",
+    "test:integration": "mocha test/integration --recursive --reporter json > integ-test-results.json",
     "test:all": "mocha test --recursive"
   },
   "dependencies": {

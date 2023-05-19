@@ -4,20 +4,25 @@ on:
   pull_request:
     branches:
       - main
+
 jobs:
   unit_test:
+    env:
+      NYC_CHECK_COVERAGE: 60
+    
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
       - run: npm install
       - run: npm run test:unit
-      - uses: actions/upload-artifact@v2  # upload test results
-        if: success() || failure()        
-        with:
-          name: unit-test-results
-          path: unit-test-results.json
+      - run: npm run coverage
+
   
   integration_test:
+    env:
+      NYC_CHECK_COVERAGE: 70
+      
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -26,10 +31,14 @@ jobs:
           node-version: "18.x"
       - run: npm install
       - run: npm run test:integration
-      - uses: actions/upload-artifact@v2  # upload test results
-        if: success() || failure()        
-        with:
-          name: integ-test-results
-          path: integ-test-results.json
-
-      
+      - run: "echo ${NYC_CHECK_COVERAGE}"
+      - run: npm run coverage
+  linting:
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v3
+          - uses: actions/setup-node@v3
+            with:
+              node-version: "18.x"
+          - run: npm install
+          - run: npm run lint

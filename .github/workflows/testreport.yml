@@ -10,7 +10,7 @@ env:
     password: ${{ secrets.GITHUB_TOKEN }}
 jobs:
   unit_report:
-    runs-on: apline-latest
+    runs-on: ubuntu-latest
     permissions:
         contents: read
         packages: write

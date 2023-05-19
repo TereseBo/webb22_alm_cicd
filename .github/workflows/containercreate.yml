@@ -10,7 +10,7 @@ env:
 
 jobs:
   generate_image:
-    runs-on: alpine-latest
+    runs-on: ubuntu-latest
     permissions:
       contents: read
       packages: write

@@ -6,7 +6,7 @@ on:
         - main
 jobs:
     deploy_main:
-        runs-on: ubuntu-latest
+        runs-on: apline-latest
         steps:
         - run: "echo now deploying to production"
 

@@ -6,7 +6,7 @@ on:
       - main
 jobs:
  linting:
-    runs-on: ubuntu-latest
+    runs-on: alpine-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3

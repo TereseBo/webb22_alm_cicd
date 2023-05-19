@@ -6,7 +6,7 @@ on:
       - main
 jobs:
   unit_test:
-    runs-on: ubuntu-latest
+    runs-on: alpine-latest
     steps:
       - uses: actions/checkout@v2
       - run: npm install

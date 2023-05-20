@@ -6,6 +6,8 @@ on:
         - main
 jobs:
     deploy_branch:
+        env:
+          NODE_ENV: development
         runs-on: ubuntu-latest
         steps:
         - run: "echo now deploying branch: $GITHUB_REF_NAME to the test server"

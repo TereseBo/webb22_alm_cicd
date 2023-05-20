@@ -2,8 +2,7 @@ name: deploy main
 
 on:
     push:
-      branches: 
-        - main
+
 jobs:
     deploy_main:
         env:

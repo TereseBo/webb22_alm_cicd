@@ -11,3 +11,4 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - run: "echo now deploying branch: $GITHUB_REF_NAME to the test server"
+        - run: "echo node_env: $NODE_ENV"

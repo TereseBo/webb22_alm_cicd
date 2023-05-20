@@ -12,4 +12,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - run: "echo now deploying to production"
+        - run: "echo node_env: $NODE_ENV"
+
 

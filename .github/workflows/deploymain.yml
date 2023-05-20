@@ -6,6 +6,9 @@ on:
         - main
 jobs:
     deploy_main:
+        env:
+          NODE_ENV: development
+
         runs-on: ubuntu-latest
         steps:
         - run: "echo now deploying to production"

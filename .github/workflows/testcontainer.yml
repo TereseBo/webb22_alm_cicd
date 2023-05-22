@@ -1,4 +1,4 @@
-name: Redis container trial
+name: Redis container example
 on: push
 
 jobs:
@@ -30,7 +30,7 @@ jobs:
       # Performs a clean installation of all dependencies in the `package.json` file
       # For more information, see https://docs.npmjs.com/cli/ci.html
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Connect to Redis
         # Runs a script that creates a Redis client, populates
@@ -41,4 +41,4 @@ jobs:
           # The hostname used to communicate with the Redis service container
           REDIS_HOST: redis
           # The default Redis port
-          REDIS_PORT: 6379
+          REDIS_PORT: 6379 

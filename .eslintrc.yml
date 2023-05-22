@@ -12,10 +12,21 @@ overrides:
     rules:
       func-names: off
       prefer-arrow-callback: off
+  - files:
+      - test/specs/*
+      - test/pageobjects/*
+    rules:
+      class-methods-use-this: off
+
 parserOptions:
   ecmaVersion: latest
+globals:
+  expect: true
+  browser: true
+  $: true
 rules:
   {
+    
     "no-unused-vars": ["error", { argsIgnorePattern: "next" }],
     "node/exports-style": ["error", "module.exports"],
     "node/file-extension-in-import": ["error", "always"],

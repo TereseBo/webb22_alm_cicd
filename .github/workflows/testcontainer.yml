@@ -3,7 +3,11 @@ on: push
 
 jobs:
   # Label of the container job
+  
   container-job:
+    env:
+        NODE_ENV: production
+        IMAGE: ${{secrets.DEPLOY_CONTAINER}}
     # Containers must run in Linux based operating systems
     runs-on: ubuntu-latest
     # Docker Hub image that `container-job` executes in

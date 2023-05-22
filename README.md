@@ -8,7 +8,7 @@ Open terminal and run:
 ```
 npm install
 ```
-You should now have everything you need. Including Husky which runs pre-commit to ensure no commits with failing tests or unseemly coding style are made. The linting is done by eslint adhering to airbnb with a few exceptions.
+You should now have everything you need. Including Husky which runs pre-commit to ensure no commits with failing tests or unseemly coding style are made. The linting is done by eslint adhering to airbnb with a few exceptions. In addition commitlinting is enforced and the commit-msg hook of husky prevents commit if message is not conforming to convention, visit this [handy guide](https://github.com/conventional-changelog/commitlint/#what-is-commitlint) for help.
 ---  
   
 
@@ -41,3 +41,8 @@ You have three options for testing, unit tests, tests of endpoints or both:
     npm run test:all
     ```
 ---
+
+
+
+## Updates
+The project is equipped with 

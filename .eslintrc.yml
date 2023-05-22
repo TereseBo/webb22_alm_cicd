@@ -13,8 +13,8 @@ overrides:
       func-names: off
       prefer-arrow-callback: off
   - files:
-      - test/specs/*
-      - test/pageobjects/*
+      - test/e2e/specs/*
+      - test/e2e/pageobjects/*
     rules:
       class-methods-use-this: off
 

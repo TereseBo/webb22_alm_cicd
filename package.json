@@ -10,7 +10,6 @@
     "prepare": "husky install",
     "test:unit": "nyc mocha test/unit --recursive",
     "test:integration": "nyc mocha test/integration --recursive",
-    "test:all": "nyc mocha test --recursive",
     "test:e2e": "npx wdio run wdio.conf.js --baseUrl http://localhost:3000",
     "coverage": "nyc check-coverage --lines ${NYC_CHECK_COVERAGE}",
     "wdio": "wdio run ./wdio.conf.js"
@@ -29,6 +28,8 @@
     "@wdio/mocha-framework": "^8.10.4",
     "@wdio/spec-reporter": "^8.10.4",
     "chromedriver": "^113.0.0",
+    "@commitlint/cli": "^17.6.3",
+    "@commitlint/config-conventional": "^17.6.3",
     "eslint": "^8.40.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-mocha": "^10.1.0",

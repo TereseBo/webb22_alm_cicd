@@ -23,7 +23,7 @@ module.exports.config = {
   // will be called from there.
   //
   specs: [
-    './test/specs/**/*.js',
+    './test/e2e/specs/**/*.js',
   ],
   // Patterns to exclude.
   exclude: [

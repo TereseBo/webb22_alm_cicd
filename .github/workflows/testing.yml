@@ -9,6 +9,7 @@ jobs:
   unit_test:
     env:
       NYC_CHECK_COVERAGE: 60
+      NODE_ENV: development
     
     runs-on: ubuntu-latest
     steps:
@@ -22,6 +23,7 @@ jobs:
   integration_test:
     env:
       NYC_CHECK_COVERAGE: 70
+      NODE_ENV: development
       
     runs-on: ubuntu-latest
     steps:

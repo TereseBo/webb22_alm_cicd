@@ -43,12 +43,13 @@ jobs:
           node-version: "18.x"
       - run: npm install
       - run: npm run test:integration
-      - uses: actions/upload-artifact@v2  # upload test results
-        if: success() || failure()        # run this step even if previous step failed
+      - uses: dorny/test-reporter@v1
+        if: always()
         with:
-          name: integ-test-results
+          name: Integration Tests
           path: report-integ.xml
-      - run: "echo ${NYC_CHECK_COVERAGE}"
+          reporter: jest-junit
+          fail-on-error: true
       - run: npm run coverage
   linting:
         runs-on: ubuntu-latest

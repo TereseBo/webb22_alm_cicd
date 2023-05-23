@@ -23,9 +23,9 @@ jobs:
       - uses: dorny/test-reporter@v1
         if: always()
         with:
-          name: Mocha Tests
-          path: test-results.json
-          reporter: mocha-json
+          name: Unit Tests
+          path: report-unit.xml
+          reporter: jest-junit
           fail-on-error: true
       - run: npm run coverage
 

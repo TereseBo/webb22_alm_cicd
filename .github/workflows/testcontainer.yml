@@ -17,7 +17,7 @@ jobs:
       # Label used to access the service container
       nginx:
         # Docker Hub image
-        image:  ghcr.io/teresebo/webb22_alm_cicd:${{ github.ref_name }}@${{ github.sha }}
+        image:  ghcr.io/teresebo/webb22_alm_cicd@${{ github.sha }}
         #
         ports:
           # Opens tcp port 8080 on the host and service container

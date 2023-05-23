@@ -6,14 +6,12 @@ on:
       - completed
 
 jobs:
-  env:
-    username: ${{ github.actor }}
-    password: ${{ secrets.GITHUB_TOKEN }}
+
   unit_report:
     runs-on: ubuntu-latest
     permissions:
         contents: read
-        packages: write
+        checks: write
     steps:
     - uses: dorny/test-reporter@v1
       with:

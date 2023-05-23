@@ -12,4 +12,4 @@ jobs:
         steps:
         - run: "echo now deploying branch: $GITHUB_REF_NAME to the test server"
         - run: "echo node_env: $NODE_ENV"
-        - run: ghcr.io/${{ github.repository }}:${{ github.ref_name }}@${{ github.sha }}
+        - run: "echo ghcr.io/${{ github.repository }}:${{ github.ref_name }}@${{ github.sha }}""

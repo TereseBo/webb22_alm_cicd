@@ -8,8 +8,8 @@
     "lint": "eslint .",
     "lint-fix": "eslint --fix .",
     "prepare": "husky install",
-    "test:unit": "mocha test/unit --recursive --reporter json > unit-test-results.json",
-    "test:integration": "mocha test/integration --recursive --reporter json > integ-test-results.json",
+    "test:unit": "mocha test/unit --recursive --reporter mocha-junit-reporter >  --reporter-options mochaFile=./testreports/unittest.xml",
+    "test:integration": "mocha test/integration --recursive  --reporter mocha-junit-reporter > --reporter-options mochaFile=./testreports/integtest.xml",
     "test:all": "mocha test --recursive"
   },
   "dependencies": {
@@ -28,6 +28,7 @@
     "eslint-plugin-node": "^11.1.0",
     "husky": "^8.0.0",
     "mocha": "^10.2.0",
+    "mocha-junit-reporter": "^2.2.0",
     "supertest": "^6.3.3"
   }
 }

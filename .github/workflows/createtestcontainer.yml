@@ -1,8 +1,8 @@
-name: Prod container creation and push
+name:  Test container creation and push
 
 on:
   push:
-    branches:
+    branches-ignore:
         - main
 env:
   REGISTRY: ghcr.io

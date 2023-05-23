@@ -1,4 +1,4 @@
-name: testing branch
+  name: testing branch
 on: push
 
 jobs:
@@ -10,9 +10,9 @@ jobs:
 
     # Service containers to run with `runner-job`
     services:
-    env:
-    REGISTRY: ghcr.io
-    IMAGE_NAME: ${{ github.repository }}
+      env:
+        REGISTRY: ghcr.io
+        IMAGE_NAME: ${{ github.repository }}
       # Label used to access the service container
       nginx:
         # Docker Hub image

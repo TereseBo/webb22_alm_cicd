@@ -20,7 +20,7 @@ jobs:
       - uses: actions/upload-artifact@v2  # upload test results
         if: success() || failure()        # run this step even if previous step failed
         with:
-          name: unit-results
+          name: unit-test-results
           path: report-unit.xml
       - run: npm run coverage
 
@@ -41,7 +41,7 @@ jobs:
       - uses: actions/upload-artifact@v2  # upload test results
         if: success() || failure()        # run this step even if previous step failed
         with:
-          name: integ-results
+          name: integ-test-results
           path: report-integ.xml
       - run: "echo ${NYC_CHECK_COVERAGE}"
       - run: npm run coverage

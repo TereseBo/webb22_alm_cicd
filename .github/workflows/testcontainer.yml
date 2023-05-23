@@ -15,7 +15,7 @@ jobs:
       # Label used to access the service container
       nginx:
         # Docker Hub image
-        image:  ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}@${{ github.sha }}
+        image:  $REGISTRY/$IMAGE_NAME@${{ github.sha }}
         #
         ports:
           # Opens tcp port 8080 on the host and service container

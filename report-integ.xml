@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.441" tests="10" failures="0">
+  <testsuite name="Root Suite" timestamp="2023-05-23T07:43:56" tests="0" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="calc/add" timestamp="2023-05-23T07:43:56" tests="0" file="C:\Users\Adam\Desktop\VSc\Program T2\ALM\webb22_alm_cicd\test\integration\routes\calcroute\addtest.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="GET /add calculations" timestamp="2023-05-23T07:43:56" tests="2" file="C:\Users\Adam\Desktop\VSc\Program T2\ALM\webb22_alm_cicd\test\integration\routes\calcroute\addtest.js" time="0.172" failures="0">
+    <testcase name="calc/add GET /add calculations responds with &quot;Result: 3 for 1 and 2" time="0.124" classname="responds with &quot;Result: 3 for 1 and 2">
+    </testcase>
+    <testcase name="calc/add GET /add calculations responds with &quot;Result: 5 for 1, 1, 1, 1 and 1" time="0.041" classname="responds with &quot;Result: 5 for 1, 1, 1, 1 and 1">
+    </testcase>
+  </testsuite>
+  <testsuite name="GET /add errormessages" timestamp="2023-05-23T07:43:56" tests="2" file="C:\Users\Adam\Desktop\VSc\Program T2\ALM\webb22_alm_cicd\test\integration\routes\calcroute\addtest.js" time="0.066" failures="0">
+    <testcase name="calc/add GET /add errormessages responds with Error page for missing param" time="0.032" classname="responds with Error page for missing param">
+    </testcase>
+    <testcase name="calc/add GET /add errormessages responds with Error page for missing params" time="0.032" classname="responds with Error page for missing params">
+    </testcase>
+  </testsuite>
+  <testsuite name="calc/multiply" timestamp="2023-05-23T07:43:56" tests="0" file="C:\Users\Adam\Desktop\VSc\Program T2\ALM\webb22_alm_cicd\test\integration\routes\calcroute\multiplytest.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="GET /multiply calculations" timestamp="2023-05-23T07:43:56" tests="2" file="C:\Users\Adam\Desktop\VSc\Program T2\ALM\webb22_alm_cicd\test\integration\routes\calcroute\multiplytest.js" time="0.074" failures="0">
+    <testcase name="calc/multiply GET /multiply calculations responds with &quot;Result: 2 for 1 and 2" time="0.018" classname="responds with &quot;Result: 2 for 1 and 2">
+    </testcase>
+    <testcase name="calc/multiply GET /multiply calculations responds with &quot;Result: 1 for 1, 1, 1, 1 and 1" time="0.039" classname="responds with &quot;Result: 1 for 1, 1, 1, 1 and 1">
+    </testcase>
+  </testsuite>
+  <testsuite name="GET /multiply errormessages" timestamp="2023-05-23T07:43:56" tests="2" file="C:\Users\Adam\Desktop\VSc\Program T2\ALM\webb22_alm_cicd\test\integration\routes\calcroute\multiplytest.js" time="0.070" failures="0">
+    <testcase name="calc/multiply GET /multiply errormessages responds with Error page for missing param" time="0.032" classname="responds with Error page for missing param">
+    </testcase>
+    <testcase name="calc/multiply GET /multiply errormessages responds with Error page for missing params" time="0.035" classname="responds with Error page for missing params">
+    </testcase>
+  </testsuite>
+  <testsuite name="users route" timestamp="2023-05-23T07:43:56" tests="0" file="C:\Users\Adam\Desktop\VSc\Program T2\ALM\webb22_alm_cicd\test\integration\routes\userstest.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="GET /users" timestamp="2023-05-23T07:43:56" tests="2" file="C:\Users\Adam\Desktop\VSc\Program T2\ALM\webb22_alm_cicd\test\integration\routes\userstest.js" time="0.054" failures="0">
+    <testcase name="users route GET /users responds with json" time="0.034" classname="responds with json">
+    </testcase>
+    <testcase name="users route GET /users responds with members" time="0.017" classname="responds with members">
+    </testcase>
+  </testsuite>
+</testsuites>

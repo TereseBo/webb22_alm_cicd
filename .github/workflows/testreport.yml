@@ -20,7 +20,7 @@ jobs:
         artifact: unit-test-results            # artifact name
         name: unit-test-results                  # Name of the check run which will be created
         path: report-unit.xml                     # Path to test results (inside artifact .zip)
-        reporter: mocha-junit-reporter             # Format of test results
+        reporter: mocha-junit            # Format of test results
         
   integration_report:
         runs-on: ubuntu-latest
@@ -30,4 +30,4 @@ jobs:
            artifact: integ-test-results            # artifact name
            name: Integ Tests                  # Name of the check run which will be created
            path: '*/integ-report.xml'                     # Path to test results (inside artifact .zip)
-           reporter: mocha-junit-reporter             # Format of test results
+           reporter: mocha-junit             # Format of test results

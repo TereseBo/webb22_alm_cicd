@@ -2,11 +2,19 @@ name: deploy main
 
 on:
     push:
-      branches: 
+      branches:
         - main
+
 jobs:
     deploy_main:
+        env:
+          NODE_ENV: production
+          IMAGE: ${{secrets.DEPLOY_CONTAINER}}
+
         runs-on: ubuntu-latest
         steps:
         - run: "echo now deploying to production"
+        - run: "echo Very not-secret image ghcr.io/${{ github.repository }}"
+        - run: "echo Very secret image: $IMAGE"
+
 

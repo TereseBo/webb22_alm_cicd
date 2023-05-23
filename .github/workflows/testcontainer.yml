@@ -1,4 +1,4 @@
-  name: testing branch
+name: testing branch
 on: push
 
 jobs:

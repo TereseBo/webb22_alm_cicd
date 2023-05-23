@@ -1,4 +1,4 @@
-name: Docker container creation and push
+name: Create deploy container
 
 on:
   push:

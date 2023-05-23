@@ -10,13 +10,10 @@ jobs:
 
     # Service containers to run with `runner-job`
     services:
-      env:
-        REGISTRY: ghcr.io
-        IMAGE_NAME: ${{ github.repository }}
       # Label used to access the service container
       nginx:
         # Docker Hub image
-        image:  $REGISTRY/$IMAGE_NAME@${{ github.sha }}
+        image:  ghcr.io/teresebo//webb22_alm_cicd@${{ github.sha }}
         #
         ports:
           # Opens tcp port 8080 on the host and service container

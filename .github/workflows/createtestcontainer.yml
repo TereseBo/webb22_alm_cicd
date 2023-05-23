@@ -48,3 +48,4 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: $SHA
       - run: echo Pushed container
+

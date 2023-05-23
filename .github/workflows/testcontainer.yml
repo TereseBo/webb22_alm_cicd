@@ -1,5 +1,9 @@
 name: testing branch again
-on: push
+on: 
+  workflow_run:
+    workflows: [Test container creation and push]                     # runs after testing workflow
+    types:
+      - completed
 
 jobs:
 

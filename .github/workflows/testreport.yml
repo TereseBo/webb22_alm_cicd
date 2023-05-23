@@ -1,5 +1,5 @@
 
-name: 'test_report'
+name: 'test_reports'
 on:
   workflow_run:
     workflows: [testing]                     # runs after testing workflow

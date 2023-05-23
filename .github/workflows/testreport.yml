@@ -1,12 +1,13 @@
-name: 'test_report'
+name: 'test_reports'
 on:
   workflow_run:
     workflows: [testing]                     # runs after testing workflow
     types:
       - completed
-
+env:
+    username: ${{ github.actor }}
+    password: ${{ secrets.GITHUB_TOKEN }}
 jobs:
-
   unit_report:
     runs-on: ubuntu-latest
     permissions:

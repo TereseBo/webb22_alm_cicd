@@ -17,11 +17,13 @@ jobs:
       - uses: actions/setup-node@v3
       - run: npm install
       - run: npm run test:unit
-      - uses: actions/upload-artifact@v2  # upload test results
-        if: success() || failure()        # run this step even if previous step failed
+      - uses: dorny/test-reporter@v1
+        if: always()
         with:
-          name: unit-test-results
-          path: report-unit.xml
+          name: Mocha Tests
+          path: test-results.json
+          reporter: mocha-json
+          fail-on-error: true
       - run: npm run coverage
 
   

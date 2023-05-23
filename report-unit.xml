@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="0.007" tests="7" failures="0">
-  <testsuite name="Root Suite" timestamp="2023-05-23T08:02:39" tests="0" time="0.000" failures="0">
+<testsuites name="Mocha Tests" time="0.006" tests="7" failures="0">
+  <testsuite name="Root Suite" timestamp="2023-05-23T19:45:58" tests="0" time="0.000" failures="0">
   </testsuite>
-  <testsuite name="Calculator " timestamp="2023-05-23T08:02:39" tests="0" file="C:\Users\Adam\Desktop\VSc\Program T2\ALM\webb22_alm_cicd\test\unit\utils\calctest.js" time="0.000" failures="0">
+  <testsuite name="Calculator " timestamp="2023-05-23T19:45:58" tests="0" file="C:\Users\adam_\OneDrive\Skrivbord\Skola\ALCM\webb22_alm_cicd\test\unit\utils\calctest.js" time="0.000" failures="0">
   </testsuite>
-  <testsuite name="getResult()" timestamp="2023-05-23T08:02:39" tests="1" file="C:\Users\Adam\Desktop\VSc\Program T2\ALM\webb22_alm_cicd\test\unit\utils\calctest.js" time="0.002" failures="0">
+  <testsuite name="getResult()" timestamp="2023-05-23T19:45:58" tests="1" file="C:\Users\adam_\OneDrive\Skrivbord\Skola\ALCM\webb22_alm_cicd\test\unit\utils\calctest.js" time="0.002" failures="0">
     <testcase name="Calculator  getResult() should return 0 when the calculator is created" time="0.000" classname="should return 0 when the calculator is created">
     </testcase>
   </testsuite>
-  <testsuite name="clearAll()" timestamp="2023-05-23T08:02:39" tests="2" file="C:\Users\Adam\Desktop\VSc\Program T2\ALM\webb22_alm_cicd\test\unit\utils\calctest.js" time="0.001" failures="0">
+  <testsuite name="clearAll()" timestamp="2023-05-23T19:45:58" tests="2" file="C:\Users\adam_\OneDrive\Skrivbord\Skola\ALCM\webb22_alm_cicd\test\unit\utils\calctest.js" time="0.001" failures="0">
     <testcase name="Calculator  clearAll() should return 0 when the calculator is cleared after add()" time="0.000" classname="should return 0 when the calculator is cleared after add()">
     </testcase>
-    <testcase name="Calculator  clearAll() should return 0 when the calculator is cleared after add and multiply()" time="0.000" classname="should return 0 when the calculator is cleared after add and multiply()">
+    <testcase name="Calculator  clearAll() should return 0 when the calculator is cleared after add and multiply()" time="0.001" classname="should return 0 when the calculator is cleared after add and multiply()">
     </testcase>
   </testsuite>
-  <testsuite name="clear" timestamp="2023-05-23T08:02:39" tests="4" file="C:\Users\Adam\Desktop\VSc\Program T2\ALM\webb22_alm_cicd\test\unit\utils\calctest.js" time="0.002" failures="0">
+  <testsuite name="clear" timestamp="2023-05-23T19:45:58" tests="4" file="C:\Users\adam_\OneDrive\Skrivbord\Skola\ALCM\webb22_alm_cicd\test\unit\utils\calctest.js" time="0.001" failures="0">
     <testcase name="Calculator  clear should return previous value of result" time="0.000" classname="should return previous value of result">
     </testcase>
     <testcase name="Calculator  clear should return previous value of result after add and multiply" time="0.000" classname="should return previous value of result after add and multiply">

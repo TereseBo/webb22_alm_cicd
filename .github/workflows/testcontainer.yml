@@ -1,6 +1,8 @@
 name: testing branch
 on: push
-
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
 jobs:
   # Label of the container job
   runner-job:
@@ -12,7 +14,7 @@ jobs:
       # Label used to access the service container
       nginx:
         # Docker Hub image
-        image: ghcr.io/${{ github.repository }}:${{ github.ref_name }}@${{ github.sha }}
+        image:  ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}@${{ github.sha }}
         #
         ports:
           # Opens tcp port 8080 on the host and service container

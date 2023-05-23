@@ -5,10 +5,11 @@ on:
     workflows: [testing]                     # runs after testing workflow
     types:
       - completed
+
+jobs:
 env:
     username: ${{ github.actor }}
     password: ${{ secrets.GITHUB_TOKEN }}
-jobs:
   unit_report:
     runs-on: ubuntu-latest
     permissions:

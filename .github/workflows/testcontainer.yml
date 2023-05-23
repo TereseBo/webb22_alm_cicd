@@ -1,0 +1,22 @@
+name: nginx Service Example
+on: push
+
+jobs:
+  # Label of the container job
+  runner-job:
+    # You must use a Linux environment when using service containers or container jobs
+    runs-on: ubuntu-latest
+
+    # Service containers to run with `runner-job`
+    services:
+      # Label used to access the service container
+      nginx:
+        # Docker Hub image
+        image: ghcr.io/${{ github.repository }:${{ github.ref_name }}@${{ github.sha }}
+        #
+        ports:
+          # Opens tcp port 8080 on the host and service container
+          - 8080:3000
+    steps:
+      - name: Smoke test with curl
+        run: curl http://localhost:8080

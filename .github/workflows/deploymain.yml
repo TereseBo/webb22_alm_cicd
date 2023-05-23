@@ -16,5 +16,5 @@ jobs:
         - run: "echo now deploying to production"
         - run: "echo Very not-secret image ghcr.io/${{ github.repository }}"
         - run: "echo Very secret image: $IMAGE"
-
+        - run: ghcr.io/${{ github.repository }:${{ github.ref_name }}@${{ github.sha }}
 

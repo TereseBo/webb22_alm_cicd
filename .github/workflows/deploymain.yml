@@ -17,4 +17,6 @@ jobs:
         - run: "echo Very not-secret image ghcr.io/${{ github.repository }}"
         - run: "echo Very secret image: $IMAGE"
         - run: "echo Package to use: ghcr.io/${{ github.repository }}:${{ github.ref_name }}@${{ github.sha }}"
+        - run: echo ${{ github.sha }}
+
 

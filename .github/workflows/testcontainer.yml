@@ -2,7 +2,7 @@ name: Redis Service Example
 on: push
 env:
   NODE_ENV: production
-   IMAGE: ${{secrets.DEPLOY_CONTAINER}}
+  IMAGE: ${{secrets.DEPLOY_CONTAINER}}
 jobs:
   # Label of the container job
   runner-job:

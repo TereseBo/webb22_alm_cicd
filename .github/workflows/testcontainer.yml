@@ -54,7 +54,7 @@ jobs:
     runs-on: ubuntu-latest
     services:
         # Label used to access the service container
-        nginx:
+        test_container:
           # Docker Hub image
           image: ghcr.io/teresebo/webb22_alm_cicd:sha-${{ github.sha }}
           #
@@ -72,8 +72,8 @@ jobs:
         - run: npm ci
         
         - name: Smoke test with curl
-          run: curl http://localhost:3000
+          run: curl http://test_container:3000
   
         - name: supertest
-          run: npm run test:e2e
+          run: npx wdio run wdio.conf.js --baseUrl http://test_container:3000
 

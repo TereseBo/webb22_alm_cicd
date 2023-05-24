@@ -1,0 +1,12 @@
+name: Write image name
+
+on:
+    push:
+jobs:
+    deploy_branch:
+        env:
+          REGISTRY: ghcr.io
+          IMAGE_NAME: ${{ github.repository }}
+        runs-on: ubuntu-latest
+        steps:
+        - run: "echo ghcr.io/${{ github.repository }}:${{ github.ref_name }}@${{ github.sha }}"

@@ -43,7 +43,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: |
-            type=sha,format=long
+          tags: type=sha,format=long
           labels: ${{ steps.meta.outputs.labels }}
       - run: echo Pushed test container

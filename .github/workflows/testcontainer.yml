@@ -51,7 +51,7 @@ jobs:
 
   containertesting:
     needs: generate_image
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     services:
         # Label used to access the service container
         server_container:
@@ -65,7 +65,7 @@ jobs:
             
     steps:
         - name: Set up Chrome
-          uses: browser-actions/setup-chrome@v1
+          uses: browser-actions/setup-chrome@latest
           with:
             chrome-version: latest
         - run: chrome --version

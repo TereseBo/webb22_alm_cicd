@@ -9,4 +9,4 @@ jobs:
           IMAGE_NAME: ${{ github.repository }}
         runs-on: ubuntu-latest
         steps:
-        - run: "echo ghcr.io/${{ github.repository }}:${{ github.ref_name }}@${{ github.sha }}"
+        - run: "echo ghcr.io/${{ github.repository }}:sha-${{ github.sha }}"

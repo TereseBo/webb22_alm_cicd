@@ -72,7 +72,7 @@ jobs:
         - run: npm ci
         
         - name: Smoke test with curl
-          run: curl http://test_container:3000
+          run: curl http://localhost:3000
   
         - name: supertest
           run: npx wdio run wdio.conf.js --baseUrl http://test_container:3000

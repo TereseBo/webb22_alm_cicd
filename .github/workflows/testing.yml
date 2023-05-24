@@ -20,6 +20,7 @@ jobs:
       - uses: actions/setup-node@v3
       - run: npm install
       - run: npm run test:unit
+      - run: npm run coverage
       - uses: dorny/test-reporter@v1
         if: always()
         with:
@@ -27,7 +28,7 @@ jobs:
           path: report-unit.xml
           reporter: jest-junit
           fail-on-error: true
-      - run: npm run coverage
+      
 
   
   integration_test:
@@ -46,6 +47,7 @@ jobs:
           node-version: "18.x"
       - run: npm install
       - run: npm run test:integration
+      - run: npm run coverage
       - uses: dorny/test-reporter@v1
         if: always()
         with:
@@ -53,7 +55,7 @@ jobs:
           path: report-integ.xml
           reporter: jest-junit
           fail-on-error: true
-      - run: npm run coverage
+      
   linting:
         runs-on: ubuntu-latest
         steps:

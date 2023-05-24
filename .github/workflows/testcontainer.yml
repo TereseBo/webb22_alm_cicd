@@ -59,5 +59,4 @@ jobs:
 
       - name: run container
         run: |
-            docker load --input /tmp/image.tar
-            docker run docker image ls -a
+            docker run /tmp/image.tar

@@ -14,7 +14,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - run: "echo now deploying to production"
-        - run: "echo Very not-secret image ghcr.io/${{ github.repository }}"
+        - run: "echo Very not-secret image ghcr.io/teresebo/webb22_alm_cicd:sha-${{ github.sha }}"
         - run: "echo Very secret image: $IMAGE"
 
 

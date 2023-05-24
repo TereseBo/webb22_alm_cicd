@@ -76,7 +76,7 @@ jobs:
       
         
         - name: Smoke test with curl
-          run: curl http://localhost:8080
+          run: curl http://localhost:3000
   
         - name: supertest
           run: npm run supertest

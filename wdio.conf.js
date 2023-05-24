@@ -54,6 +54,9 @@ module.exports.config = {
   capabilities: [{
     // capabilities for local browser web tests
     browserName: 'chrome', // or "firefox", "microsoftedge", "safari"
+    chromeOptions: {
+      args: ['no-sandbox'],
+    },
   }],
   //
   // ===================

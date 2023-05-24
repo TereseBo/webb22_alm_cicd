@@ -46,3 +46,33 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
       - run: echo Pushed deploy container
+  deploy_containertesting:
+    needs: generate_image
+    runs-on: ubuntu-latest
+    services:
+        # Label used to access the service container
+        server_container:
+          # Docker Hub image
+          image: ghcr.io/teresebo/webb22_alm_cicd:sha-${{ github.sha }}
+          #
+          ports:
+            # Opens tcp port 8080 on the host and service container
+            - 3000:3000
+    steps:
+        - name: Checkout repository
+          uses: actions/checkout@v3
+  
+        - name: Use Node.js 
+          uses: actions/setup-node@v3
+          with:
+            node-version: 18
+        - run: npm install
+
+      
+        
+        - name: Smoke test with curl
+          run: curl http://localhost:3000
+  
+        - name: supertest
+          run: npm run supertest
+      

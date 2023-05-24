@@ -47,7 +47,7 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          outputs: type=oci,dest=/tmp/image.tar
+          outputs: type=docker,dest=/tmp/image.tar
       - run: echo Pushed test container
 
       - name: run container

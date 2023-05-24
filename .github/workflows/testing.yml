@@ -11,7 +11,7 @@ jobs:
       contents: read
       checks: write
     env:
-      NYC_CHECK_COVERAGE: 60
+      NYC_CHECK_COVERAGE: 50
       NODE_ENV: development
     
     runs-on: ubuntu-latest

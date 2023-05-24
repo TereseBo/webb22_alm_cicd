@@ -79,12 +79,7 @@ jobs:
             node-version: 18
         - run: npm install
 
-        - name: Set up Chrome
-          uses: browser-actions/setup-chrome@v1
-          with:
-            chrome-version: stable
-        - run: chrome --version
-        
+      
         
         - name: Smoke test with curl
           run: curl http://localhost:8080

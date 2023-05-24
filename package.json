@@ -12,7 +12,8 @@
     "test:integration": "nyc mocha test/integration --recursive --reporter mocha-junit-reporter --reporter-options mochaFile=./report-integ.xml",
     "test:e2e": "npx wdio run wdio.conf.js --baseUrl http://localhost:3000",
     "coverage": "nyc check-coverage --lines ${NYC_CHECK_COVERAGE}",
-    "wdio": "wdio run ./wdio.conf.js"
+    "wdio": "wdio run ./wdio.conf.js",
+    "supertest":  "mocha test/container --recursive"
   },
   "dependencies": {
     "debug": "~2.6.9",

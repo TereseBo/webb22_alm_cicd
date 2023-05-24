@@ -10,9 +10,6 @@ jobs:
     permissions:
       contents: read
       checks: write
-    env:
-      NYC_CHECK_COVERAGE: 60
-      NODE_ENV: development
     
     runs-on: ubuntu-latest
     steps:
@@ -27,17 +24,12 @@ jobs:
           path: report-unit.xml
           reporter: jest-junit
           fail-on-error: true
-      - run: npm run coverage
-
   
   integration_test:
     permissions:
       contents: read
       checks: write
-    env:
-      NYC_CHECK_COVERAGE: 70
-      NODE_ENV: development
-      
+     
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -53,7 +45,6 @@ jobs:
           path: report-integ.xml
           reporter: jest-junit
           fail-on-error: true
-      - run: npm run coverage
   linting:
         runs-on: ubuntu-latest
         steps:
@@ -63,3 +54,32 @@ jobs:
               node-version: "18.x"
           - run: npm install
           - run: npm run lint
+  coverage_integration_test:
+    env:
+      NYC_CHECK_COVERAGE: 70
+      NODE_ENV: development
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18.x"
+      - run: npm install
+      - run: npm run test:integration
+      - run: "echo nyc_check_coverage ${NYC_CHECK_COVERAGE}"
+      - run: npm run coverage && 80
+  coverage_unit_test:
+    env:
+      NYC_CHECK_COVERAGE: 50
+      NODE_ENV: development
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: "18.x"
+    - run: npm install
+    - run: npm run test:integration
+    - run: "echo nyc_check_coverage ${NYC_CHECK_COVERAGE}"
+    - run: npm run coverage && 80  
+

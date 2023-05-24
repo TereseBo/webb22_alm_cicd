@@ -51,7 +51,7 @@ jobs:
 
   containertesting:
     needs: generate_image
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     services:
         # Label used to access the service container
         server_container:
@@ -61,15 +61,15 @@ jobs:
           ports:
             # Opens tcp port 8080 on the host and service container
             - 8080:3000
-        browser_container:
-            # Docker Hub image
-            image: selenium/standalone-chrome
-            #
-            ports:
-              # Opens tcp port 8080 on the host and service container
-              - 3000:4444
+
             
     steps:
+        - name: Set up Chrome
+          uses: browser-actions/setup-chrome@v1
+          with:
+            chrome-version: latest
+        - run: chrome --version
+        
         - name: Checkout repository
           uses: actions/checkout@v3
   

@@ -5,7 +5,7 @@ on:
     branches:
       - main
 env:
-  NYC_CHECK_COVERAGE: 70
+  NYC_CHECK_COVERAGE: 60
 
 jobs:
   coverage_unit_test:

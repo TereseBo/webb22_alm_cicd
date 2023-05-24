@@ -70,7 +70,7 @@ jobs:
           uses: actions/setup-node@v3
           with:
             node-version: 18
-        - run: npm ci
+        - run: npm install
 
         - name: Set up Chrome
           uses: browser-actions/setup-chrome@v1
@@ -83,5 +83,5 @@ jobs:
           run: curl http://localhost:3000
   
         - name: supertest
-          run: npx wdio run wdio.conf.js --baseUrl http://test_container:3000
+          run: npm run test:e2e
 

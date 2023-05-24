@@ -65,9 +65,9 @@ jobs:
             
     steps:
         - name: Set up Chrome
-          uses: browser-actions/setup-chrome@latest
+          uses: browser-actions/setup-chrome@v1
           with:
-            chrome-version: latest
+            chrome-version: 113.0.5672.127
         - run: chrome --version
         
         - name: Checkout repository

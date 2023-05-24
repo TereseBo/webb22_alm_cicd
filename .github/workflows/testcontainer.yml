@@ -60,16 +60,10 @@ jobs:
           #
           ports:
             # Opens tcp port 8080 on the host and service container
-            - 8080:3000
+            - 3000:3000
 
             
     steps:
-        - name: Set up Chrome
-          uses: browser-actions/setup-chrome@v1
-          with:
-            chrome-version: 113.0.0
-        - run: chrome --version
-        
         - name: Checkout repository
           uses: actions/checkout@v3
   
@@ -85,5 +79,5 @@ jobs:
           run: curl http://localhost:8080
   
         - name: supertest
-          run: npm run test:e2e
+          run: npm run supertest
 

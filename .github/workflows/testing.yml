@@ -23,7 +23,7 @@ jobs:
       - uses: dorny/test-reporter@v1
         if: always()
         with:
-          name: Unit Tests
+          name: Report Unit Tests
           path: report-unit.xml
           reporter: jest-junit
           fail-on-error: true
@@ -49,7 +49,7 @@ jobs:
       - uses: dorny/test-reporter@v1
         if: always()
         with:
-          name: Integration Tests
+          name: Report integration Tests
           path: report-integ.xml
           reporter: jest-junit
           fail-on-error: true

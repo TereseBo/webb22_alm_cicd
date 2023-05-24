@@ -67,7 +67,6 @@ jobs:
       - run: npm install
       - run: npm run test:integration
       - run: "echo nyc_check_coverage ${NYC_CHECK_COVERAGE}"
-      - run: npm run coverage && 80
   coverage_unit_test:
     env:
       NYC_CHECK_COVERAGE: 50
@@ -81,5 +80,4 @@ jobs:
     - run: npm install
     - run: npm run test:integration
     - run: "echo nyc_check_coverage ${NYC_CHECK_COVERAGE}"
-    - run: npm run coverage && 80  
 

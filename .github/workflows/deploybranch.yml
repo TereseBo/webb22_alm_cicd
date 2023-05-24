@@ -11,4 +11,5 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - run: "echo now deploying branch: $GITHUB_REF_NAME to the test server"
+        - run: "echo image to used in testing ghcr.io/teresebo/webb22_alm_cicd:sha-${{ github.sha }}"
         - run: "echo node_env: $NODE_ENV"
